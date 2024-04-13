@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="ico/logo.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hospital Viva Mais - Site Oficial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--  Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head> 
+
+<body class="bg">
+
+    <header>
+        <h1 class="montserrat600">Hospital Viva Mais</h1>
+    </header> 
+
+    <section class="container">
+
+        <h3 class="montserrat600 titulo margem-interna">Agende sua consulta:</h3>
+
+        <div class="centro margem-interna">
+            <label for="item" class="montserrat600 label-input"> Consulta: </label>
+            <select id="item" name="item" class="caixa-texto">
+                <option value="Oftalmologista">Oftalmologista</option>
+                <option value="Cardiologista">Cardiologista</option>
+                <option value="Pediatra">Pediatra</option>
+                <option value="Ortopedista">Ortopedista</option>
+            </select>
+        
+            <label for="valor" class="montserrat600 label-input"> Horário: </label>
+            <input type="datetime-local" id="valor" name="valor" class="caixa-texto"> 
+        
+            <div class="btn-container">
+                <button type="button" class="montserrat600 backgroundVerde btn" onclick="salvar()">Adicionar</button>
+            </div>
+        </div>
+        
+
+        <div class="margem-interna">
+            <table class="centro tabela montserrat600">
+                <thead>
+                    <tr>
+                        <th>Consulta</th>
+                        <th>Horário</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+                <tfoot id="table-footer">
+
+                </tfoot>
+            </table>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
