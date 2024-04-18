@@ -55,21 +55,6 @@ function excluirItem(indice) {
     }
 }
 
-function somaTotal() {
-    return listaDeCompras
-        .map(i => Number.parseFloat(i.valor))
-        .reduce((acumulador, valorItem) =>  acumulador + valorItem, 0);
-}
-
-function imprimeValor() {
-
-    console.log(somaTotal());
-
-    let valorTotal = document.getElementById('valor-total');
-    valorTotal.innerHTML = '';
-    valorTotal.innerHTML = `R$ ${somaTotal()}`;
-}
-
 function formatarDataHora(dataHora) {
     const data = new Date(dataHora);
     const dia = data.toLocaleDateString('pt-BR', { day: '2-digit' });
@@ -110,7 +95,5 @@ function atualizarTabela() {
 
         tableBody.append(tr);
     });
-
-    imprimeValor();
 
 }
